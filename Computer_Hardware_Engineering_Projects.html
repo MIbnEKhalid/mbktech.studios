@@ -1,0 +1,122 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Projects - MBK Tech Studios</title>
+    <link rel="icon" type="image/x-icon" href="Images/IconALogo.jpg" style="border-radius: 50%;">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="container">
+            <div class="logo-container">
+                <img src="Images/IconALogo.jpg" alt="MBK Tech Studios Logo">
+                <h1>MBK Tech Studios</h1>
+                <br> <br>
+                <dfndl>Innovating Beyond Boundaries</dfndl>
+            </div>
+
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html#About">About Us</a></li>
+                <li><a href="index.html#Projects">Projects</a></li>
+                <li><a href="index.html#Contact">Contact Us</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <section id="Projects">
+
+        <div class="container">
+            <div class="search-bar">
+                <input type="text" id="search" placeholder="Search project by name or Project ID #...">
+                <button class="search-bar-Cbutton" id="clearButton" type="button" onclick="clearSearch()">x</button>
+                <button class="search-bar-Sbutton" type="button" onclick="searchProjects()">Search</button>
+            </div>
+
+
+            <h2>Computer Hardware Engineering Projects</h2>
+            <div id="searchResults"></div>
+            <div class="project-grid">
+
+
+
+                <div class="project-item" id="A456">
+                    <a href="#">
+                        <img src="https://miro.medium.com/v2/resize:fit:1358/1*3gh-krzOrAoNyX8mJGyc2Q.jpeg" alt="Project 1">
+                        <h3>Comming Soon</h3>
+                    </a>
+                </div>
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="index.html#About">About Us</a></li>
+                <li><a href="index.html#Projects">Projects</a></li>
+                <li><a href="index.html#Contact">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="social-links">
+            <a href="https://youtube.com" target="_blank"> <img src="Images/youtube.png" alt="MBK Tech Studios Logo"></a>
+            <a href="https://facebook.com" target="_blank"> <img src="Images/facebook.png" alt="MBK Tech Studios Logo"></a>
+            <a href="https://discord.com" target="_blank"> <img src="Images/discord.png" alt="MBK Tech Studios Logo"></a>
+            <a href="https://instagram.com/mbktech.studios" target="_blank"> <img src="Images/instagram.png" alt="MBK Tech Studios Logo"></a>
+        </div>
+    </footer>
+</body>
+
+
+<script>
+
+    function searchProjects() {
+        var searchValue = document.getElementById("search").value.trim().toLowerCase();
+        var projectItems = document.querySelectorAll(".project-item");
+        var searchResults = document.getElementById("searchResults");
+        var found = false;
+
+        projectItems.forEach(function (item) {
+            var projectName = item.querySelector("h3").innerText.toLowerCase();
+            var projectId = item.querySelector(".project-id") ? item.querySelector(".project-id").innerText.toLowerCase() : '';
+
+            if (projectName.includes(searchValue) || projectId.includes(searchValue)) {
+                item.style.display = "block";
+                found = true;
+            } else {
+                item.style.display = "none";
+            }
+        });
+
+        if (!found) {
+            searchResults.innerText = "No results found.";
+        } else {
+            searchResults.innerText = "";
+        }
+    }
+
+    function clearSearch() {
+        document.getElementById("search").value = "";
+        searchProjects();
+    }
+
+
+</script>
+
+
+</html>
