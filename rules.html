@@ -61,11 +61,11 @@ section{
     
     /* Glowing effect */
     .glowhsl{
-      animation: glowinghsl 1s infinite;
+      animation: glowinghsl 100s infinite;
     }
 
     .glowgolden{
-      animation: glowinggolden 1s infinite;
+      animation: glowinggolden 100s infinite;
     }
     
     .glowhsl a {
@@ -79,10 +79,10 @@ section{
 
     @keyframes glowinggolden {
     0% {
-        text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px hsl(186, 100%, 69%), 0 0 40px goldenrod; /* Change the glow color to golden */
+        text-shadow: 0 0 10px #ffffff, 0 0 15px #ffffff, 0 0 20px hsl(186, 100%, 69%), 0 0 25px goldenrod; /* Change the glow color to golden */
     }
     100% {
-        text-shadow: 0 0 20px #ffffff, 0 0 30px hsl(186, 100%, 69%), 0 0 40px hsl(186, 100%, 69%), 0 0 50px goldenrod; /* Change the glow color to golden */
+        text-shadow: 0 0 15px #ffffff, 0 0 20px hsl(186, 100%, 69%), 0 0 25px hsl(186, 100%, 69%), 0 0 30px goldenrod; /* Change the glow color to golden */
     }
 }
 
@@ -90,10 +90,10 @@ section{
     @keyframes glowinghsl {
 
     0% {
-        text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px hsl(186, 100%, 69%), 0 0 40px var(--glow-color);
+        text-shadow: 0 0 10px #ffffff, 0 0 15px #ffffff, 0 0 20px hsl(186, 100%, 69%), 0 0 25px var(--glow-color);
     }
     100% {
-        text-shadow: 0 0 20px #ffffff, 0 0 30px hsl(186, 100%, 69%), 0 0 40px hsl(186, 100%, 69%), 0 0 50px var(--glow-color);
+        text-shadow: 0 0 15px #ffffff, 0 0 20px hsl(186, 100%, 69%), 0 0 25px hsl(186, 100%, 69%), 0 0 30px var(--glow-color);
     }
 }
     
