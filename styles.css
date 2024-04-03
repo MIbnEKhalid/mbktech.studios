@@ -7,6 +7,8 @@ body {
  }
  p {
     font-size:large;
+    color:#384f65;
+    font-weight:550;
  }
  a {
     color:#00a6ff;
