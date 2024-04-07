@@ -114,6 +114,7 @@
         <br>
         <button type="submit" id="sendButton">Send Message</button>
     </form>
+    <div id="messageStatus"></div>
 </div>
 
 
@@ -149,6 +150,33 @@
             
 </body>
 
+<script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+
+        // Get form data
+        var formData = new FormData(event.target);
+
+        // Submit form data
+        fetch(event.target.action, {
+            method: "POST",
+            body: formData
+        })
+        .then(function(response) {
+            // Check if response indicates success (status code 200-299)
+            if (response.ok) {
+                document.getElementById("messageStatus").textContent = "Message sent successfully!";
+            } else {
+                document.getElementById("messageStatus").textContent = "Failed to send message. Please try again later.";
+            }
+        })
+        .catch(function(error) {
+            console.error("Error sending message:", error);
+            document.getElementById("messageStatus").textContent = "Failed to send message. Please try again later.";
+        });
+    });
+</script>
+    
     <script src="script.js"></script>
     <script>
         // Call updateSocialLinks() when the page loads
