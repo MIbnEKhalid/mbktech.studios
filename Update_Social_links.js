@@ -7,13 +7,13 @@ function updateSocialLinks() {
         var href = link.getAttribute('href');
         // Update the href attribute based on your requirement
         if (href.includes('youtube.com')) {
-            link.setAttribute('href', 'NEW_YOUTUBE_LINK');
+            link.setAttribute('href', 'youtube.com/@MBKTechStudios');
         } else if (href.includes('facebook.com')) {
-            link.setAttribute('href', 'NEW_FACEBOOK_LINK');
+            link.setAttribute('href', 'facebook.com/@MBKTechStudios');
         } else if (href.includes('discord.com')) {
-            link.setAttribute('href', 'NEW_DISCORD_LINK');
+            link.setAttribute('href', 'discord.gg/MUAyAeckrM');
         } else if (href.includes('instagram.com')) {
-            link.setAttribute('href', 'NEW_INSTAGRAM_LINK');
+            link.setAttribute('href', 'instagram.com/mbktech.studios');
         }
     });
 }
