@@ -126,6 +126,7 @@ body {
     justify-content:center;
     align-items:center;
     border-radius:6px;
+    padding: 15px;
  }
  .social-links img {
     padding:5px;
@@ -147,7 +148,7 @@ body {
  footer {
     background-color:#384f65;
     color:#fff;
-    padding:10px 0;
+    padding:15px 0;
     border:4px solid #2c3e50;
     text-align:center;
  }
