@@ -112,9 +112,10 @@
         <br>
         <p>Note: It may take 1-2 business days to receive a reply via email. For immediate assistance, we recommend contacting us through social media.</p> 
         <br>
+            <div id="messageStatus"></div>
         <button type="submit" id="sendButton">Send Message</button>
     </form>
-    <div id="messageStatus"></div>
+
 </div>
 
 
@@ -161,15 +162,12 @@
     
 <script>
   document.getElementById("contactForm").addEventListener("submit", function(event) {
-    var name = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
-    var message = document.getElementById("message").value;
-
-    if (name === "" || email === "" || message === "") {
-      event.preventDefault(); // Prevent form submission
-      alert("Please fill in all fields."); // Show alert dialog
-    }
-  });
+            var messageStatus = document.getElementById("messageStatus");
+            messageStatus.innerHTML = "Submitting...";
+            setTimeout(function() {
+                messageStatus.innerHTML = "Form submitted successfully!";
+            }, 2000); // Change the timeout value as needed
+        });
 </script>
 
 
