@@ -87,47 +87,14 @@
     </footer>
 </body>
 
-<script src="Update_Social_links.js"></script>
+<script src="script.js"></script>
     <script>
         // Call updateSocialLinks() when the page loads
         window.onload = function() {
             updateSocialLinks();
         };
     </script>
-<script>
 
-    function searchProjects() {
-        var searchValue = document.getElementById("search").value.trim().toLowerCase();
-        var projectItems = document.querySelectorAll(".project-item");
-        var searchResults = document.getElementById("searchResults");
-        var found = false;
-
-        projectItems.forEach(function (item) {
-            var projectName = item.querySelector("h3").innerText.toLowerCase();
-            var projectId = item.querySelector(".project-id") ? item.querySelector(".project-id").innerText.toLowerCase() : '';
-
-            if (projectName.includes(searchValue) || projectId.includes(searchValue)) {
-                item.style.display = "block";
-                found = true;
-            } else {
-                item.style.display = "none";
-            }
-        });
-
-        if (!found) {
-            searchResults.innerText = "No results found.";
-        } else {
-            searchResults.innerText = "";
-        }
-    }
-
-    function clearSearch() {
-        document.getElementById("search").value = "";
-        searchProjects();
-    }
-
-
-</script>
 
 
 </html>
