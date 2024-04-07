@@ -39,7 +39,7 @@ function updateSocialLinks() {
         var href = link.getAttribute('href');
         // Update the href attribute based on your requirement
         if (href.includes('gmail.com')) {
-            link.setAttribute('href', 'https://gmail.com');
+            link.setAttribute('href', 'mailto:mbktech.studio@gmail.com');
         } else if (href.includes('youtube.com')) {
             link.setAttribute('href', 'https://youtube.com/@MBKTechStudios');
         } else if (href.includes('github.com')) {
