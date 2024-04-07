@@ -73,50 +73,27 @@
                 <li><a href="index.html#Contact">Contact Us</a></li>
             </ul>
         </nav>
-        <div class="social-links">
-            <a href="https://youtube.com" target="_blank"> <img src="Images/youtube.png" alt="MBK Tech Studios Logo"></a>
-            <a href="https://facebook.com" target="_blank"> <img src="Images/facebook.png" alt="MBK Tech Studios Logo"></a>
-            <a href="https://discord.com" target="_blank"> <img src="Images/discord.png" alt="MBK Tech Studios Logo"></a>
-            <a href="https://instagram.com/mbktech.studios" target="_blank"> <img src="Images/instagram.png" alt="MBK Tech Studios Logo"></a>
-        </div>
+
+   <div class="social-links">
+        
+        <a href="https://gmail.com" target="_blank"> <img src="Images/github.png" alt="MBK Tech Studios Logo"></a>
+        <a href="https://youtube.com" target="_blank"> <img src="Images/youtube.png" alt="MBK Tech Studios Logo"></a>
+        <a href="https://github.com" target="_blank"> <img src="Images/github.png" alt="MBK Tech Studios Logo"></a>
+        <a href="https://facebook.com" target="_blank"> <img src="Images/facebook.png" alt="MBK Tech Studios Logo"></a>
+        <a href="https://discord.com" target="_blank"> <img src="Images/discord.png" alt="MBK Tech Studios Logo"></a>
+        <a href="https://instagram.com/mbktech.studios" target="_blank"> <img src="Images/instagram.png" alt="MBK Tech Studios Logo"></a>
+    </div>
+        
     </footer>
 </body>
 
 
-<script>
-
-    function searchProjects() {
-        var searchValue = document.getElementById("search").value.trim().toLowerCase();
-        var projectItems = document.querySelectorAll(".project-item");
-        var searchResults = document.getElementById("searchResults");
-        var found = false;
-
-        projectItems.forEach(function (item) {
-            var projectName = item.querySelector("h3").innerText.toLowerCase();
-            var projectId = item.querySelector(".project-id") ? item.querySelector(".project-id").innerText.toLowerCase() : '';
-
-            if (projectName.includes(searchValue) || projectId.includes(searchValue)) {
-                item.style.display = "block";
-                found = true;
-            } else {
-                item.style.display = "none";
-            }
-        });
-
-        if (!found) {
-            searchResults.innerText = "No results found.";
-        } else {
-            searchResults.innerText = "";
-        }
-    }
-
-    function clearSearch() {
-        document.getElementById("search").value = "";
-        searchProjects();
-    }
-
-
-</script>
-
+<script src="script.js"></script>
+    <script>
+        // Call updateSocialLinks() when the page loads
+        window.onload = function() {
+            updateSocialLinks();
+        };
+    </script>
 
 </html>
