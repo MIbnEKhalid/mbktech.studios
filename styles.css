@@ -127,6 +127,7 @@ body {
     align-items:center;
     border-radius:6px;
     padding: 15px;
+    flex-wrap: wrap;
  }
  .social-links img {
     padding:5px;
@@ -140,6 +141,12 @@ body {
  .social-links img:hover {
     opacity:0.7;
  }
+ @media (max-width: 300px) {
+        /* Adjust for smaller screens where container width is smaller */
+        .social-links {
+            flex-direction: column; /* Stack items vertically */
+        }
+    }
  dfndl {
     font-size:10px;
     margin-top:60px;
