@@ -2,7 +2,7 @@ body {
     font-family:Arial,sans-serif;
     margin:0;
     padding:0;
-    background-color:#ECF4E5;
+    background-color:#d4e3c9;
     color:#333;
  }
  p {
@@ -208,7 +208,7 @@ body {
    transition: background-color 0.5s ease;
 }
 .selected-main {
-   background-color: #d4e3c9;
+   background-color: #e5eedd;
 }
 .selected-footer {
    background-color: #4d8583;
