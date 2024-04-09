@@ -50,7 +50,7 @@ function updateSocialLinks() {
             link.setAttribute('href', 'https://discord.gg/MUAyAeckrM');
         } else if (href.includes('instagram.com')) {
             link.setAttribute('href', 'https://instagram.com/mbktech.studios');
-        } else if (href.includes('instagram.com')) {
+        } else if (href.includes('linkedin.com')) {
             link.setAttribute('href', 'https://www.linkedin.com/in/muhammad-bin-khalid-89711b25b');
         }
     });
