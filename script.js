@@ -56,3 +56,37 @@ function updateSocialLinks() {
     });
 }
 
+
+function selectSection(sectionId) {
+    // Remove 'selected' class from all sections
+    const sections = document.querySelectorAll('.section');
+    sections.forEach(section => {
+        section.classList.remove('selected-main');
+    });
+
+    // Add 'selected' class to the clicked section
+    const selectedSection = document.getElementById(sectionId);
+    selectedSection.classList.add('selected-main');
+
+    // Remove 'selected' class after a delay (e.g., 1 second)
+    setTimeout(() => {
+        selectedSection.classList.remove('selected-main');
+    }, 1000);
+}
+
+function selectSectionfooter(sectionId) {
+    // Remove 'selected' class from all sections
+    const sections = document.querySelectorAll('.section');
+    sections.forEach(section => {
+        section.classList.remove('selected-footer');
+    });
+
+    // Add 'selected' class to the clicked section
+    const selectedSection = document.getElementById(sectionId);
+    selectedSection.classList.add('selected-footer');
+
+    // Remove 'selected' class after a delay (e.g., 1 second)
+    setTimeout(() => {
+        selectedSection.classList.remove('selected-footer');
+    }, 1000);
+}
