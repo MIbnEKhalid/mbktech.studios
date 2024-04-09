@@ -60,12 +60,16 @@ body {
     font-size:large;
  }
  nav ul li a {
-    color:#fff;
-    text-decoration:none;
+        color: #fff;
+    text-decoration: none;
+    text-align: center;
+    padding: 14px 16px;
+    border-radius: 6px;
  }
  nav ul li a:hover {
-    opacity:0.8;
-    color:azure;
+     opacity:0.8;
+    color:#377a77;
+    background-color: #fff;
  }
  section {
     padding:50px 0;
