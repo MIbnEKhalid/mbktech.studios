@@ -122,21 +122,20 @@ body {
     opacity:0.8;
  }
 
-.social-links-container {
-   width:400px;
-   height: 56px;
-   margin: 0 auto;
-   display:flex;
-   justify-content:center;
-   align-items:center;
-   padding: 15px;
-}
- .social-links {
+.social-links {
     display:flex;
     justify-content:center;
     align-items:center;
     border-radius:6px;
- }
+    padding:15px;
+    flex-wrap:wrap;
+}
+.social-links-container {
+    max-width:100%;
+    margin:0 auto;
+    overflow:hidden;
+}
+
     .social-links img {
         padding: 5px;
         height: 56px;
