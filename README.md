@@ -4,7 +4,7 @@ Website(folder) and index.html is place in main branch for deploying Website and
 Files inside UnderMaintenance folder is place in new branch(UnderMaintenance or any name) so when website is Under Maintenance 
 then UnderMaintenance branch is deplyed untill Maintenance is done.
 
-It may take few hours to update source code here after change in actual source code.
+It may take few hours to update source code here after change in actual source code of website
 
 https://muhammad-ibn-e-khalid.github.io/mbktech.studios/
 
