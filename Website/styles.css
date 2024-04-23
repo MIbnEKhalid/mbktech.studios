@@ -14,7 +14,6 @@ textp {
    font-weight:550;
 }
 
-
 /*
  - No UnderLine under Link Text
  - No Visited Color
@@ -38,11 +37,10 @@ section a:hover,
    box-shadow: 0 0 100px #48bfff;
 }
 
-
 /* Main Body */
 
 .bordered {
-   border-left:6px solid #285d59;
+   border-left:6px solid #274e4b;
    border-right:6px solid #274e4b;
 }
 
@@ -52,7 +50,7 @@ section a:hover,
    transition:background-color 0.5s ease;
 }
 .selected-main {
-   background-color:#4d8583;
+   background-color:#578482;
 }
 .selected-footer {
    background-color:#4d8583;
@@ -112,47 +110,6 @@ section {
 .project-item a:hover {
    opacity:0.8;
 }
-
-
-/* Contact Us */
-
-form{
-    border-radius: 6px;
-    padding: 20px;
-    background-color:#4d8583;
-}
-form .control {
-    margin-top: 10px;
-}
-form .field {
-    margin-bottom: 15px; 
-}
-form .label {
-    font-weight: bold;
-    margin-bottom: 5px; 
-}
-form input,form textarea {
-   width:97%;
-   margin-bottom:10px;
-   padding:10px;
-   border:1px solid #ccc;
-   border-radius:6px;
-   background-color:#fff;
-}
-form button {
-   background-color:#2ecc71;
-   color:#fff;
-   border:none;
-   font-weight: bold;
-   font-size: medium;
-   border-radius:6px;
-   padding:10px 20px;
-   cursor:pointer;
-}
-form button:hover {
-   opacity:0.8;
-}
- 
 
 /* Project Page */
 
