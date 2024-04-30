@@ -6,6 +6,21 @@ body {
    color:#333;
 }
 
+/* Change the color of text to white */
+.commento-body p,
+.commento-markdown-button,
+.commento-name,
+.commento-score,
+.commento-timeago,
+.commento-body,
+.commento-profile-button,
+.commento-sort-policy-button{
+    color: white !important;
+}
+ .commento-logo-text {
+  color: black !important;
+ }
+
 /*For Paragraphs Text*/
 
 textp {
@@ -20,21 +35,24 @@ textp {
 */
 
 section a,
-.CopyRightBox a {
-   color: #0097e8;
+.CopyRightBox a,
+.donate-button {
+   color: #48bfff ;
    text-decoration: none;
    font-weight: 750;
 }
 
 section a:visited,
-.CopyRightBox a:visited {
+.CopyRightBox a:visited,
+.donate-button a:visited {
    color: none;
 }
 
 section a:hover,
-.CopyRightBox a:hover {
+.CopyRightBox a:hover,
+.donate-button a:hover{
    color: #95daff;
-   box-shadow: 0 0 100px #48bfff;
+   box-shadow: 0 0 100px #0097e8;
 }
 
 /* Main Body */
@@ -54,9 +72,6 @@ section a:hover,
 }
 .selected-footer {
    background-color:#4d8583;
-}
-section {
-   padding:10px 20px;
 }
 
 /* Project  Section */
@@ -162,6 +177,12 @@ section {
 
 
 
+.section-margin{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
 
 
 
@@ -169,8 +190,13 @@ section {
 
 
 
-
-
+#Comment
+{ 
+    border: 6px solid #274e4b;
+    border-radius: 6px;
+    padding: 20px;
+    background-color: #377a77;
+  }
 
 
         .section-wrapper {
@@ -178,8 +204,6 @@ section {
             background-color: #377a77;
             border-radius: 5px;
             padding: 10px;
-            margin-top: 30px;
-            margin-bottom: 30px; 
         }
           #Collaboration,
           #PCSpecs 
@@ -188,10 +212,6 @@ section {
             background-color: #377a77;
             border-radius: 5px;
             padding: 10px;
-            margin-left: 15px;
-            margin-right: 15px;
-            margin-top: 30px;
-            margin-bottom: 30px; 
           }
           #Collaboration .header,
           #PCSpecs .header,
@@ -215,7 +235,8 @@ section {
           #Collaboration .header h2,
           #PCSpecs .header h2,
           #About .header h2,
-          #Contact .header h2 {
+          #Contact .header h2,
+          #Projects h2 {
               margin: 0;
           }
           #Collaboration .toggle-button,
