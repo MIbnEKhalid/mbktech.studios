@@ -10,7 +10,7 @@ Main Website (Source Code)
 https://muhammad-ibn-e-khalid.github.io/mbktech.studios/
 
 Main Website
-https://muhammad-ibn-e-khalid.github.io/
+https://muhammad-ibn-e-khalid.github.io/ or https://mbktech.xyz/
 
 https://github.com/Muhammad-Ibn-E-Khalid
 
