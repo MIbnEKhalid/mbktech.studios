@@ -1,16 +1,98 @@
-# Mbk Tech Studio Source Code
-
-Website(folder) and index.html is place in main branch for deploying Website and normally main branch is deployed.
-Files inside UnderMaintenance folder is place in new branch(UnderMaintenance or any name) so when website is Under Maintenance 
-then UnderMaintenance branch is deplyed untill Maintenance is done.
-
-It may take few hours to update source code here after change in actual source code of website
-
-Main Website (Source Code)
-https://muhammad-ibn-e-khalid.github.io/mbktech.studios/
+# Mbk Tech Studio Website
 
 Main Website
+
+https://github.com/Muhammad-Ibn-E-Khalid/Muhammad-Ibn-E-Khalid.github.io
+
 https://muhammad-ibn-e-khalid.github.io/ or https://mbktech.xyz/
+
+
+Website Source Code / Copy of Website
+
+https://github.com/Muhammad-Ibn-E-Khalid/mbktech.studios/
+
+https://muhammad-ibn-e-khalid.github.io/mbktech.studios/ or https://mbktech.xyz/mbktech.studios/
+
+
+User Profile
 
 https://github.com/Muhammad-Ibn-E-Khalid
 
+
+
+## Hosting:
+- The website is hosted on GitHub, with a custom domain purchased from Namecheap for $2 for a 12-month period. This custom domain is pointed to the GitHub repository.
+  *Note: If you are using a custom domain, ensure it is properly configured to point to your GitHub repository.*
+
+## Files Tree:
+
+### root/:
+- Assets/
+- Project/
+- Project_Category/
+- UserAgreement/
+- 404.html
+- CNAME
+- index.html
+- README.md
+
+### Assets/: 
+- Images/
+- mdImages/ (This folder contain Images for README.md so it have no effect on website)
+- disagree.html
+- footer.html 
+- header.html 
+- terms.html
+- style.css
+- Ostyle.css
+- script.js
+
+### Project/:
+- Feedback_Report_System_For_Unity.html/: 
+  - index.html
+- Quiz_Game_Cpp.html/: 
+  - index.html
+- project.css
+
+### Project_Category/:
+- index.html
+
+### UserAgreement/:
+- index.html
+
+*Note: To ensure clean and user-friendly URLs, HTML files are organized within directories named after their respective content, with each directory containing an `index.html` file. This approach facilitates clean URLs, enhancing readability and SEO performance.*
+
+#### Example:
+
+Instead of using `UserAgreement.html`:
+- Bad URL: [https://mbktech.xyz/UserAgreement.html](https://mbktech.xyz/UserAgreement.html)
+
+Use `UserAgreement/index.html`:
+  - Good URL: [https://mbktech.xyz/UserAgreement/](https://mbktech.xyz/UserAgreement/)
+
+## Functionality of Our Website:
+
+- **On First Load, Agreement Prompt:**
+  - Upon the initial loading of the website, users are prompted to agree with the terms of use.
+  - Users cannot proceed to use the website until they accept the terms of use.
+
+- **Accepting Terms of Use:**
+  - When a user agrees to the terms of use, the website saves a cookie with an expiry of 1 year.
+  - This cookie likely serves as a marker that the user has agreed to the terms and can continue to access the website without being prompted again during this period.
+
+- **Rejecting Terms of Use:**
+  - If a user rejects the terms of use, the website loads a disagreement page.
+  - After a few seconds, the website redirects the user to google.com.
+  - This behavior implies that users who do not agree to the terms are redirected away from the website.
+
+
+**Image References:**
+When Website first time laod on device.
+![Image 1 Description](Assets/mdImages/termbox.png)
+When Clcik on 'Terms Of Use & Privacy Policy' link.
+![Image 2 Description](Assets/mdImages/terms.png)
+When Click On Disagree
+![Image 3 Description](Assets/mdImages/disaagree.png)
+
+
+In the root folder, we have the home page `root/index.html` which is main page of our website.

@@ -3,88 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="../Assets/Images/IconALogo.jpg">
     <title>Terms and Conditions</title>
     
     <style>
-        
         body {
-    background-color:#000;
-    color:#fff;
-    font-family:Arial,sans-serif;
-    margin:0;
-    padding:0;
-}
-#overlay {
-    display:block;
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background-color:rgba(0,0,0,0.7);
-    z-index:9999;
-}
-#modal {
-    color:#fff;
-    position:fixed;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    background-color:#222;
-    border:1px solid #fff;
-    padding:20px;
-    border-radius:5px;
-    box-shadow:0px 0px 10px rgba(255,255,255,0.5);
-    width:95%;
-    overflow-y:auto;
-    height:90%;
-}
-#modal h2 {
+            font-family:Arial,sans-serif;
+            margin:0;
+            padding:0;
+        }
+        .mmodal  a {
+            color:#6ac2f1;
+            text-decoration:none;
+            font-weight:800;
+            text-decoration:underline;
+        }
+        .mmodal a:visited {
+            color:none;
+        }
+        .mmodal a:hover {
+            color:#95daff;
+            box-shadow:0 0 10px 5px #48bfff;
+        }
+        #overlay {
+            display:block;
+            position:fixed;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            background-color:rgba(0,0,0,0.704);
+            z-index:9999;
+        }
+        #modal {
+            color:whitesmoke;
+            position:fixed;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            background-color:#377a77;
+            border:6px solid #274e4b;
+            padding:20px;
+            border-radius:5px;
+            box-shadow:0px 0px 10px rgba(0,0,0,0.5);
+        }
+        .mmodal button {
+            padding:10px 20px;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+            font-weight:800;
+            font-size:16px;
+            transition:background-color 0.3s ease;
+        }
+        #disagreeButton {
+            background-color:#dc3545;
+            color:#fff;
+            margin-right:10px;
+        }
+        #agreeButton {
+            background-color:#28a745;
+            color:#fff;
+            float:right;
+        }
+        #agreeButton:hover {
+            box-shadow:0 0 50px 10px #46b05d;
+        }
+        #disagreeButton:hover {
+            box-shadow:0 0 50px 10px #f54b5c;
+        }
+        body.no-scroll {
+            overflow: hidden;
+        }
+        @media only screen and (max-width: 600px) {
+            #modal {
+                width: 90%;
+                padding: 10px;
+            }
+            .mmodal button {
+                padding: 5px 10px;
+                font-size: 14px;
+            }
+        }
+          .terms-box {
+            border-radius: 6px;
+            display: none;
+            position: fixed;
+            top: 7%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color:#377a77;
+            border:6px solid #274e4b;
+            color: aliceblue;
+            padding: 20px;
+            width: 80%;
+            max-width: 800px;
+            height: 80%; 
+            overflow-y: auto; 
+            z-index: 9999;
+        }
+        .terms-header {
+            text-align: right;
+        }
+        .terms-box h2 {
     font-size:30px;
     margin-bottom:20px;
     color:#4cffdb;
     text-align:center;
 }
-#modal h3 {
+.terms-box h3 {
     font-size:18px;
     color:#f1bf6a;
 }
-#modal p {
+ .terms-box p {
     font-size:16px;
     line-height:1.6;
     margin-bottom:20px;
 }
-#modal ul {
+ .terms-box ul {
     margin-bottom:20px;
     padding-left:20px;
 }
-.mmodal button {
-    padding:10px 20px;
-    border:none;
-    border-radius:5px;
-    cursor:pointer;
-    font-weight:800;
-    font-size:16px;
-    transition:background-color 0.3s ease;
+        
+.terms-box  a {
+    color:#5bc6ff;
+    font-weight:bolder;
+    text-decoration:underline;
 }
-#backToTerm {
-    background-color:#28a745;
-    color:#fff;
-    margin-right:10px;
+.terms-box a:visited {
+    color:none;
 }
-#agreeButton:hover {
-    background-color:#218838;
+.terms-box a:hover {
+    color:#75cfffdd;
+    font-weight:bolder;
+    text-decoration:underline;
 }
-#disagreeButton:hover {
-    background-color:#c82333;
-}
-.container {
+
+.terms-box .container {
     display:flex;
     align-items:center;
     justify-content:space-between;
 }
-.DateTimePara {
+.terms-box .DateTimePara {
     font-family:Arial,sans-serif;
     font-size:18px;
     color:#2f8dff;
@@ -95,83 +154,33 @@
     box-shadow:0px 4px 8px rgba(0,0,0,0.1);
     font-weight:800;
 }
-.button-container {
-    padding:15px;
-    text-align:right;
-}
-a {
-    color:#5bc6ff;
-    font-weight:bolder;
-    text-decoration:underline;
-}
-a:visited {
-    color:none;
-}
-a:hover {
-    color:#75cfffdd;
-    font-weight:bolder;
-    text-decoration:underline;
-}
-@media only screen and (max-width:600px) {
-    #modal {
-    width:90%;
-    height:90%;
-}
-}
-
-footer {
-    color:#fff;
-    padding:5px 0;
-    text-align:center;
-}.CopyRightBox{
-    padding-bottom: 5px;
-}.donate{
-    padding: 5px;
-}.social-links {
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    border-radius:6px;
-    padding: 5px;
-    flex-wrap:wrap;
-}.social-links-container {
-    max-width:100%;
-    margin:0 auto;
-    overflow:hidden;
-}.social-links img {
-    margin:5px;
-    height:56px;
-    width:56px;
-    max-width:100%;
-    transition: 0.3s;
-}.dis img:hover {
-    box-shadow:0 0 80px #e5eedd;
-    border-radius: 10px 
-}.gmail img:hover {
-    box-shadow:0 0 80px #e5eedd;
-    border-radius: 100px / 40px;
-}.yt img:hover {
-    box-shadow:0 0 80px #e5eedd;
-    border-radius: 100px / 60px;
-}.git img:hover {
-    box-shadow:0 0 80px #e5eedd;
-    border-radius:14px;
-}.fb img:hover {
-    box-shadow:0 0 80px #e5eedd;
-    border-radius:6px;
-}.insta img:hover {
-    box-shadow:0 0 80px #e5eedd;
-    border-radius:13px;
-}.lk img:hover {
-    box-shadow:0 0 80px #e5eedd;
+.terms-box button {
+    padding:10px 20px;
+    border:none;
     border-radius:5px;
+    cursor:pointer;
+    font-weight:800;
+    font-size:16px;
+    transition:background-color 0.3s ease;
 }
-
     </style>
 </head>
-<body>
+<body> 
+    
     <div class="mmodal" id="overlay">
         <div id="modal">
+            <h2>Terms of Use and Privacy Policy</h2>
+            <p>Please Read And Agree To The <a  class="termbutton" id="openModalBtn" > Terms Of Use & Privacy Policy </a> Before Accessing The Website. By Agreeing, You Are Also Agreeing To The Use Of Cookies.</p>
+            <button id="agreeButton">Agree</button>
+            <button id="disagreeButton">Disagree</button>
+        </div>
+    </div> 
+
+    <div class="terms-box" id="termsBox"style="display: none;">
+        <div class="terms-header">
+            <button id="closeTermsBtn">Close</button>
+        </div>
+        <div id="con">
             <h2>Terms and Conditions</h2>
             <h4 style=" color:lightgreen; text-align: center; font-weight: 800; " >Welcome To MBK Tech Studios, By Accepting These Terms And Conditions, You Are Agreeing To Comply With And Be Bound By The Following Terms Of Use.</h4>
             <h3 id="Section1" >Section 1: Acceptance of Terms</h3>
@@ -188,7 +197,7 @@ footer {
             <h3 id="Section3" >Section 3: Intellectual Property</h3>
             <p>All content on this <a href="https://muhammad-ibn-e-khalid.github.io/" >Website</a>, including project documentation, images, and blog posts, is the property of <a href="https://github.com/Muhammad-Ibn-E-Khalid/" target="_blank" >Muhammad Bin Khalid</a> and is protected by copyright laws of Pakistan. You may not reproduce, modify, display, sell, or distribute any content without prior written permission.</p>
             <h3 id="Section4" >Section 4: Links to Other Sites</h3>
-            <p>This <a href="https://muhammad-ibn-e-khalid.github.io/" >Website</a> may contain links to other apps, Websites, and social media accounts. I am not responsible for the content or privacy practices of these external sites.</p>
+            <p>This <a href="https://muhammad-ibn-e-khalid.github.io/" >Website</a> may contain links to other apps, <a href="https://muhammad-ibn-e-khalid.github.io/" >Website</a>s, and social media accounts. I am not responsible for the content or privacy practices of these external sites.</p>
             <h3 id="Section5" >Section 5: Contact Us Form</h3>
             <p>By using the Contact Us form, you consent to the collection and storage of your IP address and other contact information. This information will only be used to respond to your inquiry and will not be shared with third parties.</p>
             <h3 id="Section6" >Section 6: Cookies</h3>
@@ -205,52 +214,42 @@ footer {
             <h3 id="Section10" >Section 10: Website Code License</h3>
             <p>The <a href="https://github.com/Muhammad-Ibn-E-Khalid/mbktech.studios/" target="_blank" >Source Code</a> of this <a href="https://muhammad-ibn-e-khalid.github.io/" >Website</a> is provided under an open-source license, allowing you to view, copy, modify, distribute, and use it for any purpose, including commercial purposes, without requiring further permission from <a href="https://github.com/Muhammad-Ibn-E-Khalid/" target="_blank" >Muhammad Bin Khalid</a>. However, you accept that the <a href="https://github.com/Muhammad-Ibn-E-Khalid/mbktech.studios/" target="_blank" >Source Code</a> is provided "as is," without warranty of any kind, express or implied. <a href="https://github.com/Muhammad-Ibn-E-Khalid/" target="_blank" >Muhammad Bin Khalid</a> holds no liability for any damages arising from the use of this <a href="https://github.com/Muhammad-Ibn-E-Khalid/mbktech.studios/" target="_blank" >Source Code</a>.</p>
            
-             <h3 id="Section11" >Section 11: Data Privacy and Protection: </h3>
+            <h3 id="Section11" >Section 11: Data Privacy and Protection: </h3>
             <p>We Don't Give a F*ck About Your Data, And It Will Definitely Get Leaked If You Accept The Terms Of Use</p>
            
             
             <div class="container">
                 <p class="DateTimePara">Last Updated On 17/04/2024</p>
                 <div class="button-container">
-                    <button id="backToTerm">Back</button>
+                    <button id="backToTerm">Close</button>
                 </div>
             </div>
-            <footer>
-
-                   <h4>Contact Us Through Social Media</h4>
-                <div class="social-links" id="social-links">
-                    <a class="gmail" href="mailto:mbktech.studio@gmail.com" target="_blank" title="mbktech.studio@gmail.com">
-                        <img  src="../Assets/Images/gmail.png" alt="MBK Tech Studios Logo">
-                    </a>
-                    <a class="yt" href="https://youtube.com/@MBKTechStudios" target="_blank"> <img src="../Assets/Images/youtube1.png" alt="YouTube Channel Link"></a>
-                    <a class="git" href="https://github.com/Muhammad-Ibn-E-Khalid" target="_blank"> <img src="../Assets/Images/github.png" alt="Github Profile Link"></a>
-                    <a class="fb" href="https://facebook.com/@MBKTechStudios" target="_blank"> <img src="../Assets/Images/facebook.png" alt="Facebook Page Link"></a>
-                    <a class="dis" href="https://discord.gg/MUAyAeckrM" target="_blank"> <img src="../Assets/Images/discord.png" alt="Discord Server Link"></a>
-                    <a class="insta" href="https://instagram.com/mbktech.studios" target="_blank"> <img src="../Assets/Images/instagram.png" alt="Instagram Page Link"></a>
-                    <a class="lk" href="https://www.linkedin.com/in/muhammad-bin-khalid-89711b25b" target="_blank"> <img src="../Assets/Images/linkedin.png" alt="Linkedin Profile Link"></a>
-                </div>
-                
-                <div class="CopyRightBox" >
-
-                    <div class="donate" >
-                        <img height="13px" width="13px" src="../Assets/Images/psflag.png">
-                            <a href="https://alkhidmat.org/appeal/emergency-appeal-palestine-save-lives-in-gaza-today" target="_blank" class="donate-button">Donate For Palestine</a>
-                        <img height="13px" width="13px" src="../Assets/Images/psflag.png">
-                    </div>
-                
-                   &copy; 2024 MBK Tech Studios | Developed by <a href="https://github.com/Muhammad-Ibn-E-Khalid" target="_blank">Muhammad Bin Khalid</a> | <a>Terms & Conditions</a> | <a href="../Project/MBKTechStudio_SourceCode/" target="_blank" >Website Source Code</a>
-                
-                </div>
-                
-              </footer>
-            
         </div>
-        
-    </div> 
-    <script>
-        document.getElementById("backToTerm").onclick = function() {
-            window.location.href = "https://muhammad-ibn-e-khalid.github.io/";
-        };
-    </script>
+    </div>
+
+<script>
+    // Function to open the terms box
+    function openTermsBox() {
+        var termsBox = document.getElementById("termsBox");
+        termsBox.style.display = "block";
+    }
+
+    // Function to close the terms box
+    document.addEventListener('click', function(event) {
+        if (event.target.id === 'closeTermsBtn' || event.target.id === 'backToTerm') {
+            var termsBox = document.getElementById("termsBox");
+            termsBox.style.display = "none";
+        }
+    });
+
+    // Function to toggle the modal
+    document.addEventListener('click', function(event) {
+        if (event.target.id === 'openModalBtn') {
+            openTermsBox();
+        }
+    });
+
+</script>
+    
 </body>
 </html>
