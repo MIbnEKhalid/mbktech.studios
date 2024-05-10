@@ -63,11 +63,15 @@
                     }, 1000);
                 }
 
-
+                function resetMessageBoxColor() {
+                    document.getElementById("message").style.backgroundColor = "beige";
+                    document.getElementById("message").style.color = "green";
+                }
 
                 //Credit: TechLever (youtube.com/@tech-lever)
                 document.getElementById("form").addEventListener("submit", function(e) {
                     e.preventDefault();
+                   resetMessageBoxColor();
                     document.getElementById("message").textContent = "Submitting..";
                     document.getElementById("message").style.display = "block";
                     document.getElementById("submit-button").disabled = true;
@@ -133,7 +137,9 @@
                                     document.getElementById("message").style.display = "none";
                                     var numberField = document.querySelector(".phoneField");
                                     numberField.style.display = "none";
-                            }, 3600);
+                                    var supportField = document.querySelector(".supportfield");
+                                    supportField.style.display = "none";
+                            }, 2000);
                     }).catch(function(error) {
                             console.error(error);
                             document.getElementById("message").textContent = "An error occurred while submitting the form.";
@@ -142,36 +148,77 @@
             });
 
             // Function to handle change event of the subject select
+
             document.getElementById("subjectSelect").addEventListener("change", function() {
-                var numberField = document.querySelector(".phoneField");
-                var ratingField = document.querySelector(".ratingWeb");
+    var numberField = document.querySelector(".phoneField");
+    var ratingField = document.querySelector(".ratingWeb");
+    var supportField = document.querySelector(".supportfield");
 
-                if (this.value === "Collaboration") {
-                    numberField.style.display = "block";
-                    document.querySelector('input[name="Number"]').setAttribute("required", "required");
+    // Get the value of the selected option
+    var selectedOption = this.value;
 
+    if (selectedOption === "Collaboration") {
+        // Show phone number field for collaboration
+        numberField.style.display = "block";
+        document.querySelector('input[name="Number"]').setAttribute("required", "required");
 
-                    ratingField.style.display = "none";
-                    document.querySelectorAll('input[name="stars"]').forEach(function(input) { input.removeAttribute("required"); });
-  
-             
-                } else if (this.value === "Feedback") {
-                    ratingField.style.display = "block";
-                    document.querySelectorAll('input[name="stars"]').forEach(function(input) {input.setAttribute("required", "required");});
-               
-                    numberField.style.display = "none";
-                    document.querySelector('input[name="Number"]').removeAttribute("required");
-                } else {
-                    console.log("1");
-                    numberField.style.display = "none";
-                    document.querySelector('input[name="Number"]').removeAttribute("required");
-                    console.log("2");
+        // Hide rating field
+        ratingField.style.display = "none";
+        document.querySelectorAll('input[name="stars"]').forEach(function(input) {
+            input.removeAttribute("required");
+        });
 
-                    ratingField.style.display = "none";
-                    document.querySelectorAll('input[name="stars"]').forEach(function(input) { input.removeAttribute("required"); });
-  
-                }
-            });
+        // Hide support field
+        supportField.style.display = "none";
+        document.querySelectorAll('select[name="support"]').forEach(function(input) {
+            input.removeAttribute("required");
+        });
+    } else if (selectedOption === "Feedback") {
+        // Show rating field for feedback
+        ratingField.style.display = "block";
+        document.querySelectorAll('input[name="stars"]').forEach(function(input) {
+            input.setAttribute("required", "required");
+        });
+
+        // Hide phone number field
+        numberField.style.display = "none";
+        document.querySelector('input[name="Number"]').removeAttribute("required");
+
+        // Hide support field
+        supportField.style.display = "none";
+        document.querySelectorAll('select[name="support"]').forEach(function(input) {
+            input.removeAttribute("required");
+        });
+    } else if (selectedOption === "Support") {
+        // Show support field for support
+        supportField.style.display = "block";
+        document.querySelectorAll('select[name="support"]').forEach(function(input) {
+            input.setAttribute("required", "required");
+        });
+
+        // Show phone number field for support
+        numberField.style.display = "block";
+        document.querySelector('input[name="Number"]').setAttribute("required", "required");
+
+        // Hide rating field
+        ratingField.style.display = "none";
+        document.querySelectorAll('input[name="stars"]').forEach(function(input) {
+            input.removeAttribute("required");
+        });
+    } else {
+        // Hide all additional fields for other options
+        numberField.style.display = "none";
+        document.querySelector('input[name="Number"]').removeAttribute("required");
+        ratingField.style.display = "none";
+        document.querySelectorAll('input[name="stars"]').forEach(function(input) {
+            input.removeAttribute("required");
+        });
+        supportField.style.display = "none";
+        document.querySelectorAll('select[name="support"]').forEach(function(input) {
+            input.removeAttribute("required");
+        });
+    }
+});
 
             function toggleSection(sectionId, toggleButtonClass, contentClass, toggleHeadingId, isOpened) {
                 const toggleButton = document.querySelector(`${sectionId} ${toggleButtonClass}`);
@@ -277,5 +324,23 @@ function getCookie(name) {
     return null;
 }
 
-// Load terms on page load
-loadTerms();
+function openNav() {
+    document.getElementById("sidenav").style.width = "250px";
+}
+
+// Function to close side navigation
+function closeNav() {
+    document.getElementById("sidenav").style.width = "0";
+}
+
+function header(){
+
+fetch('http://localhost/web/Assets/header.html').then(response => response.text()).then(html => {
+    document.getElementById('header').innerHTML = html;
+});
+}
+function footer(){
+fetch('http://localhost/web/Assets/footer.html').then(response => response.text()).then(html => {
+    document.getElementById('footer').innerHTML = html;
+});    
+}
