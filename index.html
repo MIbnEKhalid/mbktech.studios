@@ -14,13 +14,13 @@
     </head>
 
     <header>
-
+        
         <p style="text-align: center; background-color: #f2f2f2; color: #333; padding: 10px; margin-top: 0px; ">
             <img height="13px" width="13px" src="Assets/Images/psflag.png">
             <a href="https://alkhidmat.org/appeal/emergency-appeal-palestine-save-lives-in-gaza-today" target="_blank" class="donate-button">Donate For Palestine</a>
             <img height="13px" width="13px" src="Assets/Images/psflag.png">
             <br>
-            
+
         </p>
         
         <nav class="navbar">
@@ -77,6 +77,8 @@
     <body>
 
         <div class="bordered">
+
+            <div id="terms"></div>
 
             <section style="padding: 1px;" ></section>
 
@@ -426,7 +428,7 @@
             </a>
             <a class="yt" href="https://youtube.com/@MBKTechStudios" target="_blank"> <img src="Assets/Images/youtube1.png" alt="YouTube Channel Link"></a>
             <a class="git" href="https://github.com/Muhammad-Ibn-E-Khalid" target="_blank"> <img src="Assets/Images/github.png" alt="Github Profile Link"></a>
-            <a class="fb" href="https://facebook.com/@MBKTechStudios" target="_blank"> <img src="Assets/Images/facebook.png" alt="Facebook Page Link"></a>
+            <a class="fb" href="https://www.facebook.com/people/MBK-Tech-Studio/61559079077988/" target="_blank"> <img src="Assets/Images/facebook.png" alt="Facebook Page Link"></a>
             <a class="dis" href="https://discord.gg/MUAyAeckrM" target="_blank"> <img src="Assets/Images/discord.png" alt="Discord Server Link"></a>
             <a class="insta" href="https://instagram.com/mbktech.studios" target="_blank"> <img src="Assets/Images/instagram.png" alt="Instagram Page Link"></a>
             <a class="lk" href="https://www.linkedin.com/in/muhammad-bin-khalid-89711b25b" target="_blank"> <img src="Assets/Images/linkedin.png" alt="Linkedin Profile Link"></a>
@@ -496,7 +498,18 @@
     toggleSection("#Contact", ".toggle-button", ".section-content", "#contactToggleHeading", true);
     toggleSection("#Comment", ".toggle-button", ".section-content", "#commentToggleHeading", true);
 
+
+    // Function to open side navigation
+    function openNav() {
+            document.getElementById("sidenav").style.width = "250px";
+    }
+
+    // Function to close side navigation
+    function closeNav() {
+            document.getElementById("sidenav").style.width = "0";
+    }
     document.addEventListener("DOMContentLoaded", function() {
- 
+        checkCookie();
+        loadTerms();
     });
     </script>
