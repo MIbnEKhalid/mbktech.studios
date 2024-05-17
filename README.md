@@ -11,7 +11,7 @@ Website Source Code / Copy of Website
 
 https://github.com/Muhammad-Ibn-E-Khalid/mbktech.studios/
 
-https://muhammad-ibn-e-khalid.github.io/mbktech.studios/ or https://mbktech.xyz/mbktech.studios/
+https://muhammad-ibn-e-khalid.github.io/mbktech.studios/ or https://mbktechstudio.com/mbktech.studios/
 
 
 User Profile
