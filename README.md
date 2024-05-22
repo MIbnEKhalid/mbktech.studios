@@ -1,8 +1,6 @@
 # Mbk Tech Studio Website
 
-Main Website
-
-https://github.com/MIbnEKhalid.github.io/Muhammad-Ibn-E-Khalid.github.io
+https://MIbnEKhalid.github.io/
 
 https://mbktechstudio.com/ or https://MIbnEKhalid.github.io/
 
