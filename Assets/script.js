@@ -320,7 +320,7 @@ function toggleSection(sectionId, toggleHeadingId, isOpened) {
 // Function to load terms from external file
 // Call this function where you need to show terms and conditions.
 function loadTerms() {
-    fetch('https://mbktechstudio.com/Assets/terms.html').then(response => response.text()).then(html => {
+    fetch('https://mbktechstudio.com/mbktech.studios/Assets/terms.html').then(response => response.text()).then(html => {
         document.getElementById('terms').innerHTML = html;
         document.body.classList.add('no-scroll');
         
@@ -337,7 +337,7 @@ function loadTerms() {
  // This part of code decide what to do when user disagree to terms&conditions 
 
 document.getElementById('disagreeconfirmationButton').addEventListener('click', function() {
-            window.location.href = 'https://mbktechstudio.com/Assets/disagree.html';
+            window.location.href = 'https://mbktechstudio.com/mbktech.studios/Assets/disagree.html';
 
 /*Uncomment this code when you want user to continue using your website. and comment or Remo window location.href line*/
 /*document.getElementById("confirmationModal");
@@ -432,13 +432,13 @@ function closeNav() {
 }
 
 function header() {
-    fetch('https://mbktechstudio.com/Assets/header.html').then(response => response.text()).then(html => {
+    fetch('https://mbktechstudio.com/mbktech.studios/Assets/header.html').then(response => response.text()).then(html => {
         document.getElementById('header').innerHTML = html;
     });
 }
 
 function footer() {
-    fetch('https://mbktechstudio.com/Assets/footer.html').then(response => response.text()).then(html => {
+    fetch('https://mbktechstudio.com/mbktech.studios/Assets/footer.html').then(response => response.text()).then(html => {
         document.getElementById('footer').innerHTML = html;
     });
 }
